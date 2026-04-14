@@ -1,0 +1,57 @@
+/* Estilizando a barra de navegação da página */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 50px;
+    position: relative;
+}
+.nav_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav_header ul li {
+    float: left;
+}
+
+.nav_header a {
+    display: block;
+    color: rgb(40, 40, 187);
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+}
+
+.nav_header ul li a{
+    transition: transform 200ms ease-in-out;
+    position: relative;
+}
+
+.nav_header ul li a:hover {
+    transform: scale(1.05);
+}
+
+.nav_header ul li a::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: rgb(15, 46, 146);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.nav_header ul li a:hover::after {
+    width: 100%;
+}
+
+.logo_header {
+    position: absolute;
+    left: 50px;
+    top: 5px;
+}

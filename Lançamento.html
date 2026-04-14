@@ -7,24 +7,29 @@
     <link rel="icon" type="ford-96.png" href="src/img/ford-96.png">
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 
 </head>
 <body>
-    <header>
-        <img src="src/img/logo-ford-256.png" alt="Logo da Ford Motor Company">
-        <h1>
-            <a href="index.html">Home</a>
-        </h1>
-        <h1>
-            <a href="Lançamento.html">Lançamento</a>
-        </h1>
-        <h1>
-            <a href="contato.html">Contato</a>
-        </h1>
+     <header>
+        <img class="logo_header" src="src/img/logo-ford-256.png" alt="Logo da Ford Motor Company">
+        
+        <!-- Criando a barra de navegação da página -->
+        <nav class="nav_header">
+        <ul>
+           <li><a href="index.html">Home</a></li>
+        
+            <li><a href="Lançamento.html">Lançamento</a></li>
+        
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+        </nav>
+
     </header>
 
     <main>
-       <iframe width="640" height="360" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       <iframe width="100%" height="700" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </main>
 
     <footer style="background-color: rgb(5, 30, 110);">
@@ -41,7 +46,7 @@
             <img src="src/img/instagram-logo-50.png" alt="Logo Instagram">
         </a>
 
-        <img src="src/img/ford-96.png" alt="Logo da Ford">
+        <img class="logo_footer" src="src/img/ford-96.png" alt="Logo da Ford">
     </footer>
 </body>
 </html>
