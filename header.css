@@ -14,11 +14,12 @@ header {
 
 .nav_header ul li {
     float: left;
+    margin-top: 20px;
 }
 
 .nav_header a {
     display: block;
-    color: rgb(40, 40, 187);
+    color: #003478;
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
@@ -39,7 +40,7 @@ header {
     content: " ";
     width: 0%;
     height: 4px;
-    background-color: rgb(15, 46, 146);
+    background-color: #001e46;
     position: absolute;
     bottom: 0;
     left: 0;

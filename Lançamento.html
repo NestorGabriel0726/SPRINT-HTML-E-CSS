@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/index.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="src/css/lancamento.css">
 
 </head>
 <body>
@@ -29,11 +30,82 @@
     </header>
 
     <main>
-       <iframe width="100%" height="700" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div class="video_main"> <!--Adicionando o vídeo na página-->
+
+            <iframe width="100%" height="700" src="https://www.youtube.com/embed/vQsryuNmsL0" title="Ford Ranger 2022 | Gerações" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        
+        </div>
+
+        <div class="Lançamentos"> <!--Adicionando as imagens e checkbox dentro de um container principal-->
+
+            <!--Os três containers a seguir serão secundários, e todos conterão: uma imagem do carro ofertado, um formulário com um input checkbox, e uma imagem do botão de info-->
+
+            <div class="box_1"> <!--Container secundário-->
+
+                <img src="src/img/XL Cabine.jpg" alt="Ranger XL Cabine simples">
+
+                <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário, inclusive o botão de informação-->
+
+                    <form>
+                    <input type="checkbox" id="Ranger XL" name="RangerXL Cabine simples">
+                    <label for="RangerXL"> <p>XL Cabine Simples 2.2 Diesel 4X4 MT 2022</p> <br> Preço Sugerido: R$183.850</label>
+                    </form>
+
+                    <img src="src/img/info.png" alt="Botão de informação">
+                    
+                </div>
+                
+
+            </div>
+
+            <div class="box_2"> <!--Container secundário-->
+
+                <img src="src/img/xls 2.2 diesel.jpg" alt="Ranger XLS 2.2 Diesel">
+
+                <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário, inclusive o botão de informação-->
+
+                    <form >
+                    <input type="checkbox" id="RangerXLS" name="Ranger XLS 2.2 Diesel">
+                    <label for="RangerXLS"> <p>XLS 2.2 Diesel 4X4 AT 2022</p> <br> Preço Sugerido: R$220.690</label>
+                    </form>
+
+                    <img src="src/img/info.png" alt="Botão de informação">
+
+                </div>
+                
+
+            </div>
+
+            <div class="box_3"> <!--Container secundário-->
+
+                <img src="src/img/storm.jpg" alt="Ranger Storm">
+
+                <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário, inclusive o botão de informação-->
+
+                    <form >
+                    <input type="checkbox" id="Storm" name="Ranger Storm">
+                    <label for="Storm"> <p>Storm 3.2 Diesel 4X4 AT 2022</p>  <br> Preço Sugerido: R$222.790</label>
+                    </form>
+                
+                    <img src="src/img/info.png" alt="Botão de informação">
+
+                </div>
+                
+            
+            </div>
+
+        </div>
+
+            <div class="button"> <!--Container para armazenar o botão-->
+                <button type="submit">Comprar Carros</button>
+            </div>
+
+       
     </main>
 
-    <footer style="background-color: rgb(5, 30, 110);">
-        <p style="color: white;">Redes Sociais</p>
+    <footer>
+        <p>Redes Sociais</p>
         <a href="https://www.facebook.com/FordBrasil/" target="_blank">
             <img src="src/img/facebook-50.png" alt="Logo Facebook">
         </a>
