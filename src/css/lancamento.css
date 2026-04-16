@@ -4,35 +4,54 @@
 
 .Lançamentos {
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: flex-start;
     margin-top: 5%;
     margin-bottom: 5%;
     gap: 40px;
+    width: 100%;
 }
 
-.formulario {
+.box_1, .box_2, .box_3 {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
 }
 
-.formulario input {
-    width: 35%;
-    cursor: pointer;
-}
-
-
-
-.formulario img {
-    width: 10%;
-}
-
-form {
+.formulario form {
     display: flex;
+    align-items: center;
+    gap: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-form p {
-    color: rgb(87, 87, 224);
+.formulario label strong {
+    color: #003BDE;
+    font-size: 15px;
+    display: inline-block;
+} 
+
+.formulario label span {
+    color: #333;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.formulario input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer
+}
+
+.button_info {
+    position: absolute;
+    bottom: 12px;
+}
+
+.button_info img {
+    width: 20px;
+    cursor: pointer;
 }
 
 .button {

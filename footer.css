@@ -1,26 +1,42 @@
 footer {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: relative;
-    padding: 20px;
+    padding: 20px 40px;
     background-color:#003478;
-;
+    min-height: 100px;
 }
 
-footer a {
-    padding: 5px;
-}
-
-footer p {
+.redes_sociais p {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.redes_sociais {
+    position: absolute;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
 .logo_footer {
     position: absolute;
+    top: 50px;
     right: 80px;
     bottom: 20px;
     width: 130px;
     height: auto;
+}
+
+.copyright {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    max-width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
 }
