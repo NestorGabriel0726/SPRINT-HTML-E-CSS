@@ -5,7 +5,7 @@ body {
     margin: 0;
 }
 
-main {
+.home_main {
     flex: 1;
     display: flexbox;
     flex-direction: column;

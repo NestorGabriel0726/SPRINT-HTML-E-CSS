@@ -3,8 +3,8 @@ footer {
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 20px 40px;
-    background-color:#003478;
+    padding: 10px 40px;
+    background-color:#1b357e;
     min-height: 100px;
 }
 
@@ -24,9 +24,17 @@ footer {
     gap: 15px;
 }
 
+.redes_sociais img {
+    transition: transform 200ms ease-in-out;
+}
+
+.redes_sociais img:hover {
+    transform: scale(1.05);
+}
+
 .logo_footer {
     position: absolute;
-    top: 50px;
+    top: 40px;
     right: 80px;
     bottom: 20px;
     width: 130px;

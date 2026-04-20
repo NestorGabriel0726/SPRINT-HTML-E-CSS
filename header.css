@@ -5,11 +5,13 @@ header {
     justify-content: center;
     padding: 10px 50px;
     position: relative;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 .nav_header {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 1%;
 }
 
 .nav_header ul li {
@@ -19,7 +21,7 @@ header {
 
 .nav_header a {
     display: block;
-    color: #003478;
+    color: #1b357e;
     text-align: center;
     padding: 15px 15px;
     text-decoration: none;
@@ -55,5 +57,10 @@ header {
     position: absolute;
     left: 50px;
     top: 5px;
+    transition: transform 200ms ease-in-out;
+}
+
+.logo_header:hover {
+    transform: scale(1.05);
 }
 

@@ -1,29 +1,30 @@
 main {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     gap: 60px;
-    padding: 50px 20px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    flex: 1 0 auto;
+    margin-top: 2%;
 }
 
 
 .image_main {
-    flex: 1;
     display: flex;
     justify-content: flex-end;
 }
 
 .image_main img {
     width: 100%;
-    max-width: 50px;
-    height: auto;
+    max-width: 800px;
+    height: 100%;
+    margin-top: 5%;
 }
 
 
 .form_main {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -39,7 +40,7 @@ main {
     color: #000;
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
 }
 
 .form_main input, .form_main select {
@@ -65,20 +66,23 @@ select:invalid {
     display: flex;
     justify-content: flex-end;
     margin-top: 15px;
+    width: 100%;
 }
 
 .button_send button {
-    width: 180px;
-    padding: 12px;
-    background-color: #003478;
+    width: 300px;
+    padding: 18px;
+    background-color: #1351d8;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 18px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
+    transition: transform 200ms ease-in-out;
 }
 
 .button_send button:hover {
-    background-color: #002555;
+    background-color: #1b357e;
+    transform: scale(1.05);
 }
