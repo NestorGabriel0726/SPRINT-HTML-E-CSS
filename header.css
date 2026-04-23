@@ -1,45 +1,49 @@
-/* Estilizando a barra de navegação da página */
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 10px 50px;
-    position: relative;
+    justify-content: space-between;
+    padding: 10px 5%;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.nav_header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 1%;
+    background-color: #fff;
+    z-index: 10;
 }
 
-.nav_header ul li {
-    float: left;
-    margin-top: 20px;
-}
-
-.nav_header a {
-    display: block;
-    color: #1b357e;
-    text-align: center;
-    padding: 15px 15px;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 150%;
-}
-
-.nav_header ul li a{
+.logo_header {
+    height: 60px;
+    margin-right: auto;
     transition: transform 200ms ease-in-out;
-    position: relative;
 }
 
-.nav_header ul li a:hover {
+.logo_header:hover {
     transform: scale(1.05);
 }
 
-.nav_header ul li a::after {
-    content: " ";
+.nav_header {
+    margin-right: auto;
+}
+
+.nav_header ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav_header a {
+    color: #1b357e;
+    padding: 10px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: relative;
+    transition: transform 200ms ease-in-out;
+}
+
+.nav_header a:hover {
+    transform: scale(1.05);
+}
+
+.nav_header a::after {
+    content: "";
     width: 0%;
     height: 4px;
     background-color: #001e46;
@@ -49,18 +53,31 @@ header {
     transition: 0.5s ease-in-out;
 }
 
-.nav_header ul li a:hover::after {
+.nav_header a:hover::after {
     width: 100%;
 }
 
-.logo_header {
-    position: absolute;
-    left: 50px;
-    top: 5px;
-    transition: transform 200ms ease-in-out;
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px 5%;
+        gap: 15px;
+    }
+    .logo_header, .nav_header {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .nav_header ul {
+        gap: 15px;
+    }
 }
 
-.logo_header:hover {
-    transform: scale(1.05);
+@media (max-width: 480px) {
+    .nav_header ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .nav_header a {
+        font-size: 1.1rem;
+    }
 }
-

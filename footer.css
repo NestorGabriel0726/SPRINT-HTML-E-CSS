@@ -1,50 +1,64 @@
 footer {
+    background-color: #1b357e;
+    padding: 30px 5%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 10px 40px;
-    background-color:#1b357e;
-    min-height: 100px;
-}
-
-.redes_sociais p {
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    margin: 0;
-    white-space: nowrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .redes_sociais {
-    position: absolute;
-    left: 40px;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
+.redes_sociais p {
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+}
+
 .redes_sociais img {
+    width: 35px;
     transition: transform 200ms ease-in-out;
 }
 
 .redes_sociais img:hover {
-    transform: scale(1.05);
-}
-
-.logo_footer {
-    position: absolute;
-    top: 40px;
-    right: 80px;
-    bottom: 20px;
-    width: 130px;
-    height: auto;
+    transform: scale(1.1);
 }
 
 .copyright {
-    font-size: 14px;
     color: white;
+    font-family: Arial, sans-serif;
+    font-size: 0.85rem;
     text-align: center;
-    max-width: 50%;
-    font-family: Arial, Helvetica, sans-serif;
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo_footer {
+    width: 120px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+    .redes_sociais {
+        order: 1;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .logo_footer {
+        order: 2;
+    }
+    .copyright {
+        order: 3;
+        flex: none;
+    }
 }
