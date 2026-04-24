@@ -51,7 +51,6 @@ footer {
     }
     .redes_sociais {
         order: 1;
-        flex-direction: column;
         gap: 10px;
     }
     .logo_footer {
