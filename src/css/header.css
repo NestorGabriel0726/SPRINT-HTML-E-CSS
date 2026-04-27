@@ -25,15 +25,14 @@ header {
 .nav_header ul {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 150px;
 }
 
 .nav_header a {
     color: #1b357e;
     padding: 10px 5px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.4rem;
     position: relative;
     transition: transform 200ms ease-in-out;
 }
@@ -45,7 +44,7 @@ header {
 .nav_header a::after {
     content: "";
     width: 0%;
-    height: 4px;
+    height: 2px;
     background-color: #001e46;
     position: absolute;
     bottom: 0;

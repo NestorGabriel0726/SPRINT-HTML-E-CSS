@@ -6,10 +6,9 @@
     <title>Ford Brasil | Lançamentos</title>
     <link rel="icon" type="ford-96.png" href="src/img/ford-96.png">
     <link rel="stylesheet" href="src/css/reset.css">
-    <link rel="stylesheet" href="src/index.css">
-    <link rel="stylesheet" href="contato.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="src/css/contato.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/footer.css">
 
 </head>
 <body>
@@ -43,17 +42,21 @@
                 <h2>Sobre Você</h2>
                 <input type="text" placeholder="NOME*" required> 
                 <input type="email" placeholder="E-MAIL*" required> 
-                <input type="text" placeholder="CPF*" required> 
-                <input type="text" placeholder="SOBRENOME*" required> 
-                <input type="tel" placeholder="TELEFONE*" required> 
+                <input type="tel" placeholder="TELEFONE*" required>
 
                 <label for="">
 
-                    <select name="COMO DESEJA SER CONTATADO?" required>
-                        <option value="" disabled selected>COMO DESEJA SER CONTATADO?*</option>
-                        <option value="telefone">TELEFONE</option>
-                        <option value="email">E-MAIL</option>
+                    <select name="TIPO DE CONTATO" required>
+                        <option value="" disabled selected>TIPO DE CONTATO*</option>
+                        <option value="telefone">ELOGIO</option>
+                        <option value="email">RECLAMAÇÃO</option>
+                        <option value="email">SOLICITAÇÃO</option>
                     </select>    
+
+                <textarea name="mensagem" placeholder="DIGITE SUA MENSAGEM AQUI*" rows="4" cols="50"></textarea>
+                 
+
+                
                     
                     <p>*Campo obrigatório</p>    
 

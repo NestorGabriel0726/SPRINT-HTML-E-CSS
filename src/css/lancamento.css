@@ -1,6 +1,20 @@
 .video_main {
+    display: flex;
+    justify-content: center;
     margin-top: 40px;
 }
+
+.video_main {
+        width: 100%;
+        padding: 0 10px; 
+        box-sizing: border-box;
+    }
+
+    .video_main iframe {
+        width: 80%;
+        aspect-ratio: 16 / 9; 
+        border-radius: 8px;
+    }
 
 .descrition {
     display: flex;
@@ -147,7 +161,7 @@
     }
 
     .formulario {
-        flex-direction: column;
+        display: flex;
         align-items: flex-start;
         gap: 15px;
     }
@@ -159,6 +173,11 @@
     .button button {
         width: 100%;
         max-width: 400px;
+    }
+
+    .video_main {
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 
@@ -181,6 +200,40 @@
 
     .descrition {
         flex-wrap: wrap;
+    }
+}
+
+/* Ajuste do vídeo */
+@media (max-width: 1320px) {
+    .video_main {
+        width: 100%;
+        padding: 0 10px; 
+        box-sizing: border-box;
+    }
+
+    .video_main iframe {
+        width: 100%;
+        height: auto; 
+        aspect-ratio: 16 / 9; 
+        border-radius: 8px;
+    }
+
+    
+    .video_main p {
+        width: 100%;
+        max-width: 90vw;
+        margin: 15px auto;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .video_main p {
+        font-size: 0.9rem;
+        padding: 0 5px;
     }
 }
 
