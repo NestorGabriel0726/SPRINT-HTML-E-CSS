@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/css/lancamento.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/footer.css">
+    <script src="js/compare.js"></script>
 
 </head>
 <body>
@@ -53,7 +54,7 @@
                 <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário.-->
 
                     <form>
-                    <input type="checkbox" id="RangerXL" name="RangerXL Cabine simples">
+                    <input type="checkbox" id="RangerXL" name="RangerXL Cabine simples" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('XL Cabine Simples 2.2 Diesel 4X4 MT 2022', 183850, 511, 1821, 232, 1234, 2.2, 160, 1420, 'Aço Estampado 16', 'img/XL Cabine.jpg'));">
                     <label for="RangerXL"> <strong> XL Cabine Simples 2.2 Diesel 4X4 MT 2022 </strong>
                     <span> Preço Sugerido: R$183.850 </span> </label>
                     </form>
@@ -74,7 +75,7 @@
                 <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário, inclusive o botão de informação-->
 
                     <form>
-                    <input type="checkbox" id="RangerXLS" name="Ranger XLS 2.2 Diesel">
+                    <input type="checkbox" id="RangerXLS" name="Ranger XLS 2.2 Diesel" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('XLS 2.2 Diesel 4X4 AT 2022', 220690, 511, 1821, 232, 1076, 2.2, 160, 1180, 'Aço Estampado 16', 'img/xls 2.2 diesel.jpg'));">
                     <label for="RangerXLS"> <strong> XLS 2.2 Diesel 4X4 AT 2022 </strong>
                     <span> Preço Sugerido: R$220.690 </span> </label>
                     </form>
@@ -95,7 +96,7 @@
                 <div class="formulario"> <!--Esse container serve para organizar os elementos do formulário, inclusive o botão de informação-->
 
                     <form >
-                    <input type="checkbox" id="Storm" name="Ranger Storm">
+                    <input type="checkbox" id="Storm" name="Ranger Storm" value="car1" class="checkbox" onchange="SetCarToCompare(this, new Car('Storm 3.2 Diesel 4X4 AT 2022', 222790, 511, 1821, 232, 1040, 3.2, 200, 1180, 'Liga Leve 17', 'img/storm.jpg'));">
                     <label for="Storm"> <strong> Storm 3.2 Diesel 4X4 AT 2022 </strong> 
                     <span> Preço Sugerido: R$222.790 </span> </label>
                     </form>
@@ -112,7 +113,7 @@
         </div>
 
         <div class="button"> <!--Container para armazenar o botão-->
-            <button type="submit">Comparar Carros</button>
+            <button type="submit" onclick="ShowCompare()">Comparar Carros</button>
         </div>
 
        
