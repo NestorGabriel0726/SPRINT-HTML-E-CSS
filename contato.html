@@ -41,13 +41,13 @@
 
             <form onsubmit="Post(this);">
                 <h2>Sobre Você</h2>
-                <input type="text" placeholder="NOME*" required> 
-                <input type="email" placeholder="E-MAIL*" required> 
-                <input type="tel" placeholder="TELEFONE*" required>
+                <input type="text" name="nome" id="nome" placeholder="NOME*" required> 
+                <input type="email" name="email" placeholder="E-MAIL*" required> 
+                <input type="tel" name="telefone" placeholder="TELEFONE*" required>
 
                 <label for="">
 
-                    <select name="TIPO DE CONTATO" required>
+                    <select name="contato" required>
                         <option value="" disabled selected>TIPO DE CONTATO*</option>
                         <option value="telefone">ELOGIO</option>
                         <option value="email">RECLAMAÇÃO</option>
@@ -64,7 +64,7 @@
                 </label>
 
             <div class="button_send">
-                <button type="submit">Enviar</button>
+                <button type="submit" id="buttonSend" onclick="enviar()">Enviar</button>
             </div>
 
             </form>

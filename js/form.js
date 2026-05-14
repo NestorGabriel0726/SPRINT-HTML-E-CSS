@@ -2,7 +2,12 @@
 //class contato
 
 class contato {
-    
+    constructor(nome, email, telefone, contato) {
+        this.nome = nome;
+        this.email = email;
+        this.telefone = telefone;
+        this.contato = contato
+    }
 }
 
 function Post(form) {
@@ -15,6 +20,7 @@ function Post(form) {
             form.elements.namedItem("contato").value);
   
 }
+
 
 function Enviar() {
 
