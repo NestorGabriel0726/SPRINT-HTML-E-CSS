@@ -10,64 +10,58 @@
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <script src="js/carousel.js"></script>
-
 </head>
 <body>
     <header>
         <img class="logo_header" src="src/img/logo-ford-256.png" alt="Logo da Ford Motor Company">
-        
-        <!-- Criando a barra de navegação da página -->
         <nav class="nav_header">
-        <ul>
-           <li><a href="index.html">Home</a></li>
-        
-            <li><a href="Lançamento.html">Lançamento</a></li>
-        
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Lançamento.html">Lançamento</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
         </nav>
-
     </header>
 
-    <main>
-        <div id="carousel">
+    <main class="home_main">
+        <div class="carousel-container">
+            
+            <div id="carousel">
+
+                <button class="carousel-button anterior">&#10094;</button>
+                <button class="carousel-button proxima">&#10095;</button>
+
+            </div>
+
+            
+
+            <div id="carousel-title"></div>
         </div>
-        <div id="carousel-title">
-        </div>
+        
         <script>
-             //insert each image on carousel
-            carouselArr.push(new Carousel("src/img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","lancamento.html"));
-            carouselArr.push(new Carousel("src/img/imagem_2.jpg","Ford a nossa história","#"));
-            carouselArr.push(new Carousel("src/img/imagem_3.jpg","Nova Ford Bronco Sport 2022","lancamento.html"));
+            carouselArr.push(new Carousel("src/img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","Lançamento.html"));
+            carouselArr.push(new Carousel("src/img/imagem_2.jpg","Ford a nossa história","Lançamento.html"));
+            carouselArr.push(new Carousel("src/img/imagem_3.jpg","Nova Ford Bronco Sport 2022","Lançamento.html"));
             Carousel.Start(carouselArr);
         </script>
     </main>
 
     <footer>
-
         <div class="redes_sociais">
-
             <p>Redes Sociais</p>
-
             <a href="https://www.facebook.com/FordBrasil/" target="_blank">
                 <img src="src/img/facebook-50.png" alt="Logo Facebook">
             </a>
-
             <a href="https://www.youtube.com/fordbrasil" target="_blank">
                 <img src="src/img/youtube-squared-50.png" alt="Logo YouTube">
             </a>
-
             <a href="https://www.instagram.com/fordbrasil/" target="_blank">
                 <img src="src/img/instagram-logo-50.png" alt="Logo Instagram">
             </a>
-
         </div>
-        
-
         <div class="copyright">
             <p>&copy; 2026 Ford Brasil | Viva o Novo. Todos os direitos reservados.</p>
         </div>
-
         <img class="logo_footer" src="src/img/ford-96.png" alt="Logo da Ford">
     </footer>
 </body>
