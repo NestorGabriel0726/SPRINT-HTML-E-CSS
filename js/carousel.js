@@ -28,9 +28,8 @@ class Carousel {
             Carousel._size = arr.length;
             Carousel._sequence = 0;
 
-            Carousel.Next();
-
-            Carousel._interval = setInterval(function(){ Carousel.Next(); },2000);
+            Carousel.UpdateDOM();
+            Carousel.ResetTimer();
             
             
         } else {
@@ -38,7 +37,24 @@ class Carousel {
         }
     }
 
+    static ResetTimer() {
+        clearInterval(Carousel._interval);
+        Carousel._interval = setInterval(function(){Carousel.Next();}, 2000);
+    }
+
     static Next(){
+        Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
+        Carousel.UpdateDOM();
+        Carousel.ResetTimer();
+    }
+
+    static Prev(){
+        Carousel._sequence = (Carousel._sequence - 1 + Carousel._size) % Carousel._size;
+        Carousel.UpdateDOM();
+        Carousel.ResetTimer();
+    }
+
+    static UpdateDOM(){
         const drawArea = document.getElementById("carousel");
         const titleArea = document.getElementById("carousel-title")
         
@@ -50,8 +66,6 @@ class Carousel {
                                     </a>`;
 
             titleArea.innerHTML = `<h2> ${currentItem.title} </h2>`;
-
-            Carousel._sequence = (Carousel._sequence + 1) % Carousel._size;
         }
     }
 };

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="stylesheet" href="src/css/header.css">
     <link rel="stylesheet" href="src/css/footer.css">
-    <script src="js/carousel.js"></script>
 </head>
 <body>
     <header>
@@ -26,24 +25,14 @@
     <main class="home_main">
         <div class="carousel-container">
             
-            <div id="carousel">
-
-                <button class="carousel-button anterior">&#10094;</button>
-                <button class="carousel-button proxima">&#10095;</button>
-
-            </div>
-
+            <button class="carousel-buttonAnterior" onclick="Carousel.Prev()">&#10094;</button>
             
+            <div id="carousel"></div>
+            
+            <button class="carousel-buttonProxima" onclick="Carousel.Next()">&#10095;</button>
 
             <div id="carousel-title"></div>
         </div>
-        
-        <script>
-            carouselArr.push(new Carousel("src/img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","Lançamento.html"));
-            carouselArr.push(new Carousel("src/img/imagem_2.jpg","Ford a nossa história","Lançamento.html"));
-            carouselArr.push(new Carousel("src/img/imagem_3.jpg","Nova Ford Bronco Sport 2022","Lançamento.html"));
-            Carousel.Start(carouselArr);
-        </script>
     </main>
 
     <footer>
@@ -64,5 +53,13 @@
         </div>
         <img class="logo_footer" src="src/img/ford-96.png" alt="Logo da Ford">
     </footer>
+
+    <script src="js/carousel.js"></script>
+    <script>
+        carouselArr.push(new Carousel("src/img/imagem_1.jpg","Esta é a nova Ranger Ford 2022. Verifique novidades.","Lançamento.html"));
+        carouselArr.push(new Carousel("src/img/imagem_2.jpg","Ford a nossa história","Lançamento.html"));
+        carouselArr.push(new Carousel("src/img/imagem_3.jpg","Nova Ford Bronco Sport 2022","Lançamento.html"));
+        Carousel.Start(carouselArr);
+    </script>
 </body>
 </html>

@@ -22,6 +22,8 @@ function Post(form) {
             form.elements.namedItem("mensagem").value);  
 
             console.log(data);
+
+            form.reset();
 }
 
 
