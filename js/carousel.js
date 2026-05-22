@@ -42,7 +42,7 @@ class Carousel {
     // Lógica para o temporizador controlar o tempo de exibição de imagens do carrosel.
     static ResetTimer() {
         clearInterval(Carousel._temporizador); // Para resetar o temporiizador caso o usuário clique em um dos botões.
-        Carousel._temporizador = setInterval(function(){Carousel.Next();}, 2000);
+        Carousel._temporizador = setInterval(function(){Carousel.Next();}, 4000);
     }
 
     // Lógica para passar o próximo slide.

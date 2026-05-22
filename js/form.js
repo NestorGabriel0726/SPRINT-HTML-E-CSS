@@ -32,7 +32,16 @@ function Enviar() {
     var nome = document.getElementById("nome");
 
     if (nome.value != "") {
-        alert('Obrigado sr(a) ' + nome.value + ' os seus dados foram encaminhados com sucesso');
+        // Exibindo a caixa de mensagem
+        var modal = document.getElementById("customAlert");
+        var modalMessage = document.getElementById("modalMessage");
+
+        modalMessage.innerHTML = 'Obrigado sr(a) <strong>' + nome.value + '</strong> os seus dados foram encaminhados com sucesso!'
+        modal.style.display = "flex";
     }
 
+}
+
+function fecharModal() {
+    document.getElementById("customAlert").style.display = "none";
 }
