@@ -37,7 +37,11 @@ function SetCarToCompare(el, carClass) {
         if(el.checked){
             // Impede o usuário de selecionar mais de dois veículos
             if(carArr.length >= 2){
-                alert("Só é permitido selecionar dois veículos para comparação!");
+                let modal = document.getElementById("customAlert");
+                let modalMessage = document.getElementById("modalMessage");
+
+                modalMessage.innerHTML = 'Por favor, só é permitido selecionar dois veículos para comparação!'
+                modal.style.display = "flex";
                 el.checked = false; // Desmarca a checkbox
                 return;
             }
@@ -56,18 +60,28 @@ function SetCarToCompare(el, carClass) {
     }
 }
 
+function fecharModal() {
+    document.getElementById("customAlert").style.display = "none";
+}
+
 function ShowCompare() {
     if(carArr.length < 2) {
-        alert("Precisa marcar 2 carros para apresentar a comparação");
+        modal = document.getElementById("customAlert");
+        modalMessage = document.getElementById("modalMessage");
+
+        modalMessage.innerHTML = 'Por favor, selecione dois veículos para comparação!'
+        modal.style.display = "flex";
         return;
     }
 
     UpdateCompareTable();
     document.getElementById("compare").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
 }
 
 function HideCompare(){
-    document.getElementById("compare").style.display = "none"; 
+    document.getElementById("compare").style.display = "none";
+    document.getElementById("overlay").style.display = "none"; 
 }
 
 function UpdateCompareTable() {
