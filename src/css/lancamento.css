@@ -333,25 +333,121 @@ div#compare {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        flex: 1;
+    }
+
     .Lançamentos {
-        grid-template-columns: 1fr;
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 40px !important;
+        width: 100% !important;
+        margin: 20px auto !important;
     }
 
-    .nav_header ul {
-        gap: 10px;
+    .box_1, .box_2, .box_3 {
+        width: 90% !important;
+        max-width: 350px !important;
+        margin-bottom: 0 !important;
     }
 
-    .nav_header a {
-        font-size: 0.9rem;
-    }
-    
-    .logo_header {
-        height: 40px;
+    .formulario {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 15px !important;
     }
 
-    .descrition {
-        flex-wrap: wrap;
+    .formulario form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .formulario label {
+        min-width: unset !important;
+        width: auto !important;
+        max-width: 220px;
+    }
+
+    .formulario input[type="checkbox"] {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: auto !important;
+    }
+}
+
+@media (max-width: 1028px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    main {
+        flex: 1;
+    }
+
+    .Lançamentos {
+        display: flex !important;
+        flex-direction: column !important; 
+        align-items: center !important;
+        gap: 50px !important;
+        width: 100% !important;
+        margin: 40px auto !important;
+    }
+
+    .box_1, .box_2, .box_3 {
+        width: 90% !important;
+        max-width: 400px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .formulario {
+        width: 100% !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-top: 15px !important;
+    }
+
+    .formulario form {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .formulario label {
+        min-width: unset !important;
+        width: auto !important;
+        max-width: 250px;
+    }
+
+    .formulario input[type="checkbox"] {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    footer {
+        width: 100%;
+        margin-top: auto !important;
     }
 }
 
