@@ -29,7 +29,6 @@ body {
     display: block;
 }
 
-
 .carousel-buttonAnterior, .carousel-buttonProxima {
     position: absolute;
     top: 50%;
@@ -43,14 +42,6 @@ body {
     border-radius: 5px;
     transition: background 0.3s ease;
     z-index: 10;
-    transition:
-    background 0.2s ease,
-    opacity 0.2s ease;
-    opacity: 0;
-}
-
-.carousel-container:hover .carousel-buttonAnterior, .carousel-container:hover .carousel-buttonProxima {
-    opacity: 1;
 }
 
 .carousel-buttonAnterior:hover, .carousel-buttonProxima:hover {
@@ -65,7 +56,7 @@ body {
     right: 15px;
 }
 
-#carousel-title h2, a {
+#carousel-title h2 {
     font-family: Arial, sans-serif;
     font-size: 1.2rem;
     color: #333;
@@ -79,7 +70,6 @@ body {
     .carousel-buttonAnterior, .carousel-buttonProxima {
         font-size: 1.5rem;
         padding: 10px 5px;
-        opacity: 1;
     }
 }
 
@@ -99,7 +89,6 @@ body {
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        opacity: 1;
     }
 
     .carousel-buttonAnterior {

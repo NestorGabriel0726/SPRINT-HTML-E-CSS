@@ -70,7 +70,7 @@ class Carousel {
                                     <img src= "${currentItem.image}" >
                                     </a>`;
 
-            titleArea.innerHTML = `<h2> <a href= "${currentItem.link}"> ${currentItem.title} </a> </h2>`;
+            titleArea.innerHTML = `<h2> ${currentItem.title} </h2>`;
         }
     }
 };
