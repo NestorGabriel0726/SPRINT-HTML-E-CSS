@@ -25,12 +25,19 @@ function Post(form) {
 
             form.reset();
 }
-
+console.log('oi')
+let button_Send = document.getElementById("buttonSend");
+var check = document.getElementById("aceite_termos")
+console.log(button_Send)
+console.log(check)
+if (check.checked) {
+    console.log('checado')
+    button_Send.removeAttribute('disabled');
+}
 
 function Enviar() {
 
     var nome = document.getElementById("nome");
-    var check = document.getElementById("aceite_termos")
 
     if (nome.value != "" && check.checked) {
         // Exibindo a caixa de mensagem
@@ -46,7 +53,8 @@ function Enviar() {
 
         modal_ErroMensagem.innerHTML = 'Por gentileza, é necesário preencher todos os campos obrigatórios e aceitar os Termos e Condições para enviar seus dados!'
         modal_erro.style.display = "flex";
-        
+
+
     }
 
 }

@@ -132,6 +132,13 @@ select:invalid {
     transform: scale(1.05);
 }
 
+.button_send button:disabled {
+    background-color: rgba(19, 81, 216, 0.3);
+    transition: none;
+    cursor: auto;
+    transform: none;
+}
+
 
 .modal-overlay {
     display: none;
