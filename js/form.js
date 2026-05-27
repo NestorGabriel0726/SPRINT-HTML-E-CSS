@@ -30,14 +30,23 @@ function Post(form) {
 function Enviar() {
 
     var nome = document.getElementById("nome");
+    var check = document.getElementById("aceite_termos")
 
-    if (nome.value != "") {
+    if (nome.value != "" && check.checked) {
         // Exibindo a caixa de mensagem
         var modal = document.getElementById("customAlert");
         var modalMessage = document.getElementById("modalMessage");
 
         modalMessage.innerHTML = 'Obrigado sr(a) <strong>' + nome.value + '</strong> os seus dados foram encaminhados com sucesso!'
         modal.style.display = "flex";
+
+    } else if (!check.checked) {
+        let modal_erro = document.getElementById("customAlert");
+        let modal_ErroMensagem = document.getElementById("modalMessage");
+
+        modal_ErroMensagem.innerHTML = 'Por gentileza, é necesário preencher todos os campos obrigatórios e aceitar os Termos e Condições para enviar seus dados!'
+        modal_erro.style.display = "flex";
+        
     }
 
 }
