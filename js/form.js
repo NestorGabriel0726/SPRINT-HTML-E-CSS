@@ -24,16 +24,15 @@ function Post(form) {
             console.log(data);
 
             form.reset();
+            button_Send.disabled = true;
 }
-console.log('oi')
+
+let formulario = document.querySelector('form');
 let button_Send = document.getElementById("buttonSend");
-var check = document.getElementById("aceite_termos")
-console.log(button_Send)
-console.log(check)
-if (check.checked) {
-    console.log('checado')
-    button_Send.removeAttribute('disabled');
-}
+var check = document.getElementById("aceite_termos");
+
+check.addEventListener('change', () => button_Send.disabled = !check.checked);
+
 
 function Enviar() {
 
@@ -47,12 +46,12 @@ function Enviar() {
         modalMessage.innerHTML = 'Obrigado sr(a) <strong>' + nome.value + '</strong> os seus dados foram encaminhados com sucesso!'
         modal.style.display = "flex";
 
-    } else if (!check.checked) {
-        let modal_erro = document.getElementById("customAlert");
-        let modal_ErroMensagem = document.getElementById("modalMessage");
+    // } else if (!check.checked) {
+    //     let modal_erro = document.getElementById("customAlert");
+    //     let modal_ErroMensagem = document.getElementById("modalMessage");
 
-        modal_ErroMensagem.innerHTML = 'Por gentileza, é necesário preencher todos os campos obrigatórios e aceitar os Termos e Condições para enviar seus dados!'
-        modal_erro.style.display = "flex";
+    //     modal_ErroMensagem.innerHTML = 'Por gentileza, é necesário preencher todos os campos obrigatórios e aceitar os Termos e Condições para enviar seus dados!'
+    //     modal_erro.style.display = "flex";
 
 
     }
