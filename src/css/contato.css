@@ -68,6 +68,7 @@ select:invalid {
 
 .form_main a {
     color: #1351d8;
+    border-bottom: 2px solid #1351d8;
 }
 
 .lgpd_text {
