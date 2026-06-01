@@ -19,9 +19,15 @@ function Post(form) {
             form.elements.namedItem("email").value, 
             form.elements.namedItem("telefone").value, 
             form.elements.namedItem("contato").value, 
-            form.elements.namedItem("mensagem").value);  
+            form.elements.namedItem("mensagem").value);
+            
 
-            console.log(data);
+            // Ele sóp faz o envio para o console, caso todos os campos do formulário tenham sido preenchidos.
+            
+            if (formulario.checkValidity()){
+                console.log(data);
+            }
+
 
             form.reset();
             button_Send.disabled = true;
@@ -36,9 +42,12 @@ check.addEventListener('change', () => button_Send.disabled = !check.checked);
 
 function Enviar() {
 
+    let formulario = document.querySelector('form'); // Criei uma variável para armazenar todos os dados do formulário.
+
     var nome = document.getElementById("nome");
 
-    if (nome.value != "" && check.checked) {
+    // A validação para verificar se todos os campos do formulário foram preenchidos.
+    if (formulario.checkValidity()) {
         // Exibindo a caixa de mensagem
         var modal = document.getElementById("customAlert");
         var modalMessage = document.getElementById("modalMessage");
@@ -46,12 +55,14 @@ function Enviar() {
         modalMessage.innerHTML = 'Obrigado sr(a) <strong>' + nome.value + '</strong> os seus dados foram encaminhados com sucesso!'
         modal.style.display = "flex";
 
-    // } else if (!check.checked) {
-    //     let modal_erro = document.getElementById("customAlert");
-    //     let modal_ErroMensagem = document.getElementById("modalMessage");
+        // Se todos os campos não tiverem sido preenchidos, ele executa o bloco de código abaixo.
 
-    //     modal_ErroMensagem.innerHTML = 'Por gentileza, é necesário preencher todos os campos obrigatórios e aceitar os Termos e Condições para enviar seus dados!'
-    //     modal_erro.style.display = "flex";
+    } else {
+        let modal_erro = document.getElementById("customAlert");
+        let modal_ErroMensagem = document.getElementById("modalMessage");
+
+        modal_ErroMensagem.innerHTML = 'Por gentileza, para fazer o envio de seus dados, além de aceitar os Termos e Condições é necessário preencher todos os campos obrigatórios!'
+        modal_erro.style.display = "flex";
 
 
     }
