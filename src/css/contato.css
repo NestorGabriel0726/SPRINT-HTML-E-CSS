@@ -66,11 +66,6 @@ select:invalid {
     color: #999;
 }
 
-.form_main a {
-    color: #1351d8;
-    border-bottom: 2px solid #1351d8;
-}
-
 .lgpd_text {
     text-align: left;
     margin-top: 2%;
@@ -93,6 +88,11 @@ select:invalid {
     align-items: flex-start;
     gap: 10px;
     width: 100%;
+}
+
+.checkbox_1 a {
+    color: #1351d8;
+    border-bottom: 2px solid #1351d8;
 }
 
 .checkbox_lgpd input[type="checkbox"] {
